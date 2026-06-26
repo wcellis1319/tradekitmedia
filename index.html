@@ -35,7 +35,21 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
-header{background:rgba(10,18,40,0.82);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.07);position:fixed;top:0;width:100%;z-index:100;}
+header{
+position:fixed;
+top:0;
+width:100%;
+z-index:100;
+background:rgba(10,18,40,0.82);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.07);
+box-shadow:0 2px 24px rgba(0,0,0,0.35);
+padding:18px 40px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
 .header-logo{font-family:var(--font-body);font-weight:600;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;background:var(--gradient-accent);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .header-cta{font-family:var(--font-body);font-weight:600;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--color-white);text-decoration:none;border:1px solid rgba(255,255,255,0.25);padding:9px 22px;border-radius:var(--radius-btn);transition:background var(--transition-fast),border-color var(--transition-fast);}
 .header-cta:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.5);}
@@ -92,6 +106,7 @@ body{font-size:18px;}
 header{padding:16px 24px;}
 .hero{padding:120px 24px 72px;}
 .hero h1{font-size:2.8rem;}
+.hero-sub{max-width:85%;margin-left:auto;margin-right:auto;}
 .section{padding:64px 24px;}
 .cta-band{padding:72px 24px;}
 footer{padding:32px 24px;}
@@ -99,6 +114,12 @@ footer{padding:32px 24px;}
 .service-block{padding:28px 24px;}
 .hero-cta-wrap{flex-direction:column;align-items:center;}
 .btn-primary,.btn-ghost{width:100%;max-width:320px;text-align:center;}
+.section-title{font-size:2.2rem;line-height:1.15;}
+.service-item-sub{color:#3a3a3a;}
+.card-price .price-period{color:#3a3a3a;}
+.web-note{color:#3a3a3a;}
+.card-tier{color:#555;}
+.footer-sub{color:#555;}
 }
 </style>
 </head>
@@ -202,11 +223,13 @@ footer{padding:32px 24px;}
 </div>
 </div>
 
+<div class="gradient-bar"></div>
 <section class="cta-band">
 <h2>Ready to grow your business online?</h2>
 <p>Book a free 30-minute call. No pressure, no pitch deck — just a straight conversation about where you are and where you want to be.</p>
 <a href="https://calendly.com/wcellis1025/30min" class="btn-primary">Book a Free Call</a>
 </section>
+<div class="gradient-bar"></div>
 
 <footer>
 <div class="footer-sig">William Ellis</div>
@@ -215,7 +238,6 @@ footer{padding:32px 24px;}
 
 </body>
 </html>
-
 
 
 
